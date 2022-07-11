@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>are u sure u wanna delete "{{obj}}"?</p>
+    <a href="{{request.META.HTTP_REFERER}}">go back</a>
+    <input type="submit" value="Conform">
+</form>
+
+
+{% endblock content %}
